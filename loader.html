@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<div id="particles-js"></div>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ametrine Soft</title>
+</head>
+<body>
+    <!-- Элемент анимации загрузки -->
+    <div id="loadingScreen">Loading...</div>
+    
+    <header>
+        <h1>AMETRINE</h1>
+        <nav>
+            <ul>
+                <li><a href="ame.html">Home</a></li>
+                <li><a href="loader.html">→ Loader ←</a></li>
+                <li><a href="settings.html">Configs</a></li>
+                <li><a href="changelog.html">Changelogs</a></li>
+                <li><a href="buy.html">Buy</a></li>
+                <li><a href="sup.html">Support</a></li>
+                <li><a href="api.html">API</a></li>
+            </ul>
+            <section>
+                <div class="image-container image1">
+                    <img src="images/5.png" alt="Изображение 1">
+                </div>
+            <nav>
+                <ul>
+                    <div class="image-container">
+            
+                    </div>
+                </ul>
+                </nav>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Cheat status</h2>
+            <h2>ㅤ<h2>
+            <h2>🟢UNDETECT🟢</h2>
+            <h2>ㅤ</h2>
+        </section>
+        <section>
+            <h2>🔴If you launched the loader and it closed, just wait 1 minute, it means the update is downloading, after downloading the loader will automatically open🔴</h2>
+         
+        </section>
+        <button id="downloadButton" onclick="startDownload()">Download</button>
+        <div id="loadingAnimation"></div>
+    </main>
+    <footer>
+        <p>Dev discord: Loen , aurorafreeqn</p>
+        <p>Buy : https://funpay.com/lots/offer?id=25628154</p>
+    </footer>
+
+    <script>
+      window.addEventListener('load', function() {
+        setTimeout(function() {
+          document.getElementById('loadingScreen').style.display = 'none';
+        }, 2000); // 2 секунды до скрытия экрана загрузки
+      });
+    </script>
+    <script>
+        function startDownload() {
+  document.getElementById("downloadButton").style.display = "none"; // Скрыть кнопку Download
+  document.getElementById("loadingAnimation").style.display = "block"; // Показать анимацию загрузки
+        }
+  // Эмулируем задержку загрузки файла в 3 секунды
+setTimeout(function() {
+    // Здесь можно добавить код для загрузки файла
+    // Например, если ваш файл находится по адресу "path/to/your/file.pdf",
+    // то вы можете использовать следующий код для перенаправления пользователя на этот файл:
+    // Эмулируем задержку загрузки файла в 3 секунды
+setTimeout(function() {
+    // Здесь можно добавить код для загрузки файла
+    // Создаем временную ссылку
+    var downloadLink = document.createElement("a");
+    // Устанавливаем путь к файлу в атрибуте href
+    downloadLink.href = 'load/Ametrine.exe';
+    // Устанавливаем имя файла для скачивания
+    downloadLink.download = 'Ametrine.exe';
+    // Скрытно добавляем ссылку на страницу
+    document.body.appendChild(downloadLink);
+    // Запускаем скачивание файла
+    downloadLink.click();
+    // Удаляем временную ссылку
+    document.body.removeChild(downloadLink);
+    
+    // После успешной загрузки файла можно скрыть анимацию загрузки и показать кнопку Download
+    document.getElementById("loadingAnimation").style.display = "none";
+    document.getElementById("downloadButton").style.display = "block";
+}, 3000); 
+
+    
+    // После успешной загрузки файла можно скрыть анимацию загрузки и показать кнопку Download
+}, 3000); 
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<div id="particles-js"></div>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ametrine Soft</title>
+</head>
+<body>
+    <!-- Элемент анимации загрузки -->
+    <div id="loadingScreen">Loading...</div>
+    
+    <header>
+        <h1>AMETRINE</h1>
+        <nav>
+            <ul>
+                <li><a href="ame.html">Home</a></li>
+                <li><a href="loader.html">Loader</a></li>
+                <li><a href="settings.html">Configs</a></li>
+                <li><a href="changelog.html">Changelogs</a></li>
+                <li><a href="buy.html">Buy</a></li>
+                <li><a href="sup.html">Support</a></li>
+                <li><a href="api.html">→ API ←</a></li>
+            </ul>
+            <section>
+                <div class="image-container image1">
+                    <img src="images/5.png" alt="Изображение 1">
+                </div>
+            <nav>
+                <ul>
+                    <div class="image-container">
+            
+                    </div>
+                </ul>
+                </nav>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Rules</h2>
+            <h2>ㅤ</h2>
+            <p>It is prohibited to transfer/sell the subscription to other people</p>
+            <p>Punishment - cancellation of subscription</p>
+            <h2>ㅤ</h2>
+            <p>It is forbidden to quack/try to bypass cheat authorization. The system will see your hacking attempt and automatically block you</p>
+            <p>Punishment - BAN</p>
+            <h2>ㅤ</h2>
+            <p>It is forbidden to violate the chat rules.</p>
+            <p>Punishment - TimeOut</p>
+        </section>
+        <section>
+        <h3>The cheat is based on AimStar. Below is a link to the sources. Many functions were rewritten, new ones were added, but we cannot hide that it was originally AimStar</h3>
+        <h2>CowNow Thank You!</h2>
+        <button id="downloadButton" onclick="startDiscord()">AimStar</button>
+        <div id="loadingAnimation"></div>
+    </main>
+    <footer>
+        <p>Dev discord: Loen , aurorafreeqn</p>
+        <p>Buy : https://funpay.com/lots/offer?id=25628154</p>
+    </footer>
+
+    <script>
+      window.addEventListener('load', function() {
+        setTimeout(function() {
+          document.getElementById('loadingScreen').style.display = 'none';
+        }, 2000); // 2 секунды до скрытия экрана загрузки
+      });
+    </script>
+    <script>
+    
+   
+
+function startDiscord() {
+  // Скрываем кнопку Download и показываем анимацию загрузки
+  document.getElementById("downloadButton").style.display = "none";
+  document.getElementById("loadingAnimation").style.display = "block";
+  
+  // Задержка перед переходом по ссылке (эмуляция загрузки)
+  setTimeout(function() {
+    // Устанавливаем новый адрес страницы для перехода по ссылке
+    window.location.href = 'https://github.com/CowNowK/AimStar';
+  }, 3000); // Задержка в 3 секунды
+}
+
+  
+        
+    </script>
+</body>
+</html>

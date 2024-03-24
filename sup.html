@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<div id="particles-js"></div>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ametrine Soft</title>
+</head>
+<body>
+    <!-- Элемент анимации загрузки -->
+    <div id="loadingScreen">Loading...</div>
+    
+    <header>
+        <h1>AMETRINE</h1>
+        <nav>
+            <ul>
+                <li><a href="ame.html">Home</a></li>
+                <li><a href="loader.html">Loader</a></li>
+                <li><a href="settings.html">Configs</a></li>
+                <li><a href="changelog.html">Changelogs</a></li>
+                <li><a href="buy.html">Buy</a></li>
+                <li><a href="sup.html">→ Support ←</a></li>
+                <li><a href="api.html">API</a></li>
+            </ul>
+            <section>
+                <div class="image-container image1">
+                    <img src="images/5.png" alt="Изображение 1">
+                </div>
+            <nav>
+                <ul>
+                    <div class="image-container">
+            
+                    </div>
+                </ul>
+                </nav>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Support</h2>
+            <h3>We solve problems such as:</h3>
+            <h2>ㅤ</h2>
+            <h2>ㅤ</h2>
+            <p>·  Buy Ametrine</p>
+            <h2>ㅤ</h2>
+            <h2>ㅤ</h2>
+            <p>·  Reset HWID</p>
+            <h2>ㅤ</h2>
+            <h2>ㅤ</h2>
+            <p>·  Startup problems</p>
+            <h2>ㅤ</h2>
+            <h2>ㅤ</h2>
+            <p>·  Issue a trial subscription</p>
+            <h2>ㅤ</h2>
+            <h2>ㅤ</h2>
+            <p>·  Become a project employee</p>
+        </section>
+        <button id="downloadButton" onclick="startDiscord()">Join Discord</button>
+        <div id="loadingAnimation"></div>
+        <button id="downloadButton" onclick="startDownload()">Open Ticket</button>
+        <div id="loadingAnimation"></div>
+    </main>
+    <footer>
+        <p>Dev discord: Loen , aurorafreeqn</p>
+        <p>Buy : https://funpay.com/lots/offer?id=25628154</p>
+    </footer>
+
+    <script>
+      window.addEventListener('load', function() {
+        setTimeout(function() {
+          document.getElementById('loadingScreen').style.display = 'none';
+        }, 2000); // 2 секунды до скрытия экрана загрузки
+      });
+    </script>
+    <script>
+    
+   
+    
+    function startDownload() {
+  // Скрываем кнопку Download и показываем анимацию загрузки
+  document.getElementById("downloadButton").style.display = "none";
+  document.getElementById("loadingAnimation").style.display = "block";
+  
+  // Задержка перед переходом по ссылке (эмуляция загрузки)
+  setTimeout(function() {
+    // Устанавливаем новый адрес страницы для перехода по ссылке
+    window.location.href = 'https://discord.com/channels/1139949585603760259/1196884823608938586';
+  }, 3000); // Задержка в 3 секунды
+}
+
+function startDiscord() {
+  // Скрываем кнопку Download и показываем анимацию загрузки
+  document.getElementById("downloadButton").style.display = "none";
+  document.getElementById("loadingAnimation").style.display = "block";
+  
+  // Задержка перед переходом по ссылке (эмуляция загрузки)
+  setTimeout(function() {
+    // Устанавливаем новый адрес страницы для перехода по ссылке
+    window.location.href = 'https://discord.gg/qkCEh6VyH5';
+  }, 3000); // Задержка в 3 секунды
+}
+
+  
+        
+    </script>
+</body>
+</html>

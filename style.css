@@ -1,0 +1,316 @@
+/* Основные стили */
+body {
+  font-family: 'segoe ui black', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url('images/realpaste1.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #eee;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Основные стили */
+body {
+  font-family: 'segoe ui black', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url('images/realpaste1.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #eee;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  transition: background-position 0.8s ease; /* Плавное изменение позиции фонового изображения */
+}
+
+/* При наведении курсора меняем позицию фонового изображения */
+body:hover {
+  background-position: center 20px; /* Смещаем фон на 10px вниз */
+}
+
+
+/* Стили для контейнера с изображением part.png */
+.image-container.image3 {
+  position: absolute; /* Абсолютное позиционирование */
+  top: 0; /* Устанавливаем part.png в том же верхнем краю, что и agent.png */
+  left: 0; /* Устанавливаем part.png в том же левом краю, что и agent.png */
+  width: 500px; /* Задайте нужную ширину */
+  height: auto; /* Поддерживаем пропорции изображения */
+  transition: transform 0.3s ease; /* Плавная анимация изменения размера */
+}
+
+/* Анимация для вращения изображения part.png при наведении */
+.image-container.image3 img:hover {
+  transform: rotate(360deg); /* Вращение изображения при наведении */
+}
+
+
+
+
+/* Стили для контейнера с изображением agent.png */
+.image-container.image2 {
+  position: relative; /* Относительное позиционирование */
+}
+
+/* Стили для контейнера с изображением part.png */
+.image-container.image3 {
+  position: absolute; /* Абсолютное позиционирование */
+  top: 100%; /* Размещаем part.png под контейнером с agent.png */
+  left: 0; /* Устанавливаем part.png слева от контейнера с agent.png */
+  transform: translateY(-100%); /* Сдвигаем part.png наверх на 100% своей высоты */
+}
+
+
+/* Новые стили для контейнера с изображением и текстом */
+.image-with-text {
+  display: flex; /* Устанавливаем flex-контейнер */
+  align-items: center; /* Выравнивание элементов по центру по вертикали */
+}
+
+/* Новый стиль для контейнера с изображением */
+.image-container.image2 {
+  margin-right: 20px; /* Отступ справа от изображения */
+}
+
+/* Стили для контейнера с текстом */
+.text-container {
+  flex: 1; /* Растягиваем контейнер с текстом, чтобы он занимал оставшееся пространство */
+}
+
+/* Стили для контейнера с изображением, которое будет находиться ниже */
+.image-container.image3 {
+  position: absolute; /* Устанавливаем абсолютное позиционирование */
+  top: 0; /* Устанавливаем позицию по верхнему краю */
+  left: 0; /* Устанавливаем позицию по левому краю */
+}
+
+/* Добавляем фоновое изображение для контейнера image3 */
+.image-container.image3 img {
+  background-image: url('C:\Users\Aurora\Desktop\паста1\паста\images\part.png');
+  background-size: cover; /* Масштабируем фон, чтобы он покрывал всю область */
+  background-position: center; /* Выравниваем фон по центру */
+  width: 300px; /* Начальная ширина изображения */
+  height: auto; /* Сохраняем пропорции изображения */
+  transition: transform 0.3s ease; /* Плавная анимация вращения */
+}
+
+/* При наведении производим анимацию вращения для part.png */
+.image-container.image3 img:hover {
+  transform: rotate(360deg); /* Вращение изображения при наведении */
+}
+
+#downloadButton {
+  background-color: #b324d6; /* Зеленый цвет кнопки */
+  border: none;
+  color: rgba(255, 255, 255, 0.651);
+  padding: 15px 32px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+#loadingAnimation {
+  display: none; /* Начально скрываем анимацию загрузки */
+  border: 8px solid #f3f3f3; /* Цвет круга */
+  border-top: 8px solid #ff54f1; /* Цвет круга при загрузке */
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 2s linear infinite; /* Анимация вращения */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+
+
+
+/* Стили для изображения 1 */
+.image-container.image1 img {
+  width: 100px; /* Начальный размер изображения */
+  height: auto; /* Сохраняем пропорции изображения */
+  transition: transform 0.3s ease; /* Плавная анимация изменения размера */
+}
+
+.image-container.image1 img:hover {
+  transform: scale(1.5); /* Увеличение размера изображения при наведении */
+}
+
+/* Стили для изображения 1 */
+.image-container.image5 img {
+  width: 600px; /* Начальный размер изображения */
+  height: auto; /* Сохраняем пропорции изображения */
+  transition: transform 0.9s ease; /* Плавная анимация изменения размера */
+}
+
+.image-container.image5 img:hover {
+  transform: scale(1.2); /* Увеличение размера изображения при наведении */
+}
+
+/* Стили для изображения 1 */
+.image-container.image6 img {
+  width: 300px; /* Начальный размер изображения */
+  height: auto; /* Сохраняем пропорции изображения */
+  transition: transform 0.5s ease; /* Плавная анимация изменения размера */
+}
+
+.image-container.image6 img:hover {
+  transform: scale(1.3); /* Увеличение размера изображения при наведении */
+}
+
+/* Стили для изображения 2 */
+.image-container.image2 img {
+  width: 300px; /* Начальный размер изображения */
+  height: auto; /* Сохраняем пропорции изображения */
+  transition: transform 0.2s ease; /* Плавная анимация изменения размера */
+}
+
+.image-container.image2 img:hover {
+  transform: scale(1.2); /* Увеличение размера изображения при наведении */
+}
+
+
+
+
+header {
+  background-color: #9932CC;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  width: 100%;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 200%; /* Размер увеличен в 2 раза */
+  /* Анимация и свечение для логотипа */
+  animation: float 3s ease-in-out infinite, textGlow 5s linear infinite;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  background-color: #9400D3;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  display: inline-block;
+  padding: 20px 20px;
+  color: white;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+  background-color: #5d00b4;
+}
+
+main {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  width: 80%;
+  max-width: 800px;
+}
+
+main section {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  width: 100%;
+}
+
+/* Анимации */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.fadeIn {
+  animation-name: fadeIn;
+  animation-duration: 2s;
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+.float {
+  animation-name: float;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+/* Добавляем стили для экрана загрузки */
+#loadingScreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  color: #000;
+  animation: fadeOut 1s ease forwards;
+  z-index: 1000;
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; visibility: hidden; }
+}
+
+
+/* Анимация для свечения текста */
+@keyframes textGlow {
+  0%, 100% {
+    text-shadow: 0 0 8px #fff, 0 0 10px #fff, 0 0 12px #ff00ff, 0 0 14px #ff00ff, 0 0 16px #ff00ff, 0 0 18px #ff00ff, 0 0 20px #ff00ff;
+  }
+  50% {
+    text-shadow: 0 0 2px #fff, 0 0 4px #fff, 0 0 6px #ff00ff, 0 0 8px #ff00ff, 0 0 10px #ff00ff, 0 0 12px #ff00ff, 0 0 14px #ff00ff;
+  }
+}
