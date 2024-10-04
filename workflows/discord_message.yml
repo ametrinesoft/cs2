@@ -1,0 +1,17 @@
+name: Send Discord Message
+
+on:
+  schedule:
+    # Отправка сообщения каждые 1 минут
+    - cron: '*/1 * * * *'
+
+jobs:
+  sendMessage:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Send message to Discord
+      run: |
+        curl -H "Content-Type: application/json" \
+        -d '{"content": "!get_key test"}' \
+        ${{ secrets.DISCORD_WEBHOOK }}
